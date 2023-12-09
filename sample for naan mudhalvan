@@ -1,0 +1,143 @@
+file name-port.html
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            SIRAJ DEEN R - portfolio
+        </title>
+            <link rel="stylesheet" type="text/css" href="port.css">
+        <body>
+            <header>
+                <div class="header-inner">
+                    <img src="Default_pfp.jpg" alt="profile" class="profile picture"></div>
+                    <h1>SIRAJ DEEN R</h1><br>
+                    <P>WEB DEVELOPER</P>
+            </header><br>
+            <header class="head2">
+            <nav>
+                <ul>
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#project">PROJECTS</a></li>
+                    <LI><a href="#contact">CONTACTS</a></LI>
+                </ul>
+            </nav>
+            </header>
+            <section id="about">
+            <h2>About Me</h2>
+            <p> Hello everyone this is siraj deen and i am a developer, 
+                and this is the sample of my project <strong>portfolio</strong></p>
+            </section>
+            <hr>
+            <section id="project">
+                <h2>
+                projects
+                </h2><br>
+                <li>login page</li>
+                <li>web site for shop</li>
+            </section>
+            <hr>
+            <section id="contact">
+                <h2>contact</h2>
+                <p><strong>Gmail:</strong>deens329@gmail.com</li></p>   
+            </section>
+            <hr>
+            <footer>
+                <P>&COPY; 2023 SIRAJ DEEN R</p>
+                    <p>sample project</p>
+            </footer>
+                <script src="port.js"></script>
+        </body>
+    </head>
+</html>
+
+#css
+port.css
+
+body{
+    background-color: rgb(120, 151, 168);
+}
+body,h1,h2,p{
+    text-align: center;
+    background-color: #35394e;
+    color: rgb(233, 233, 240);
+    padding: 2rem 0;
+    position: relative;
+
+}
+
+.header-content h1{
+    font-size: 2rem;
+    align-items:flex-start;
+}
+.profile picture{
+    right: auto;
+    width: auto;
+    height: auto;
+    border-radius: 5px;
+    object-position: left top;
+    margin-left: 3cm;
+    margin-right: 2cm;
+    align-self: auto;
+    align-items: safe;
+}
+hr{
+background-color: bisque;
+}
+.header-inner{
+    display: flexbox;
+    justify-content: space-between;
+    border-image-width: auto;
+    image-resolution: auto;
+    text-align: center;
+    background-color: #35394e;
+}
+.head2{
+    text-align: center;
+    background-color: blue;
+}
+nav ul{
+    list-style: lower-alpha;
+}
+nav ul li{
+    display: inline;
+    margin: 0 20px;
+    font-weight: 20;
+}
+nav a{
+    text-decoration: solid;
+    color: aliceblue;
+}
+section{
+    padding: 20px;
+}
+footer{
+    background-color: #35394e;
+    color: antiquewhite;
+    text-align: center;
+    padding: 10px;
+}
+
+#javascript
+port.js
+
+const header=document.querySelector('header')
+header.addEventListener('mouseover',function(){
+    header.style.backgroundColor='grey';
+
+});
+header.addEventListener('mouseout',function(){
+    header.style.backgroundColor='#333';
+});
+document.querySelectorAll('a[href^="#"]').forEach(anchor=>
+    anchor.addEventListener('clicl',function(e)
+    {
+        e.preventDefault();
+        const targetid=this.getattribute('href').substring(1);
+        const targerElement=document.getElementById(targetid);
+        if(targerElement)
+        {
+            window.scrollTo(
+                {top:targerElement.offsetTop,behavior:'smooth'});
+        }
+    })
+);    
